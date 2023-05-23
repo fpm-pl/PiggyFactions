@@ -18,8 +18,8 @@ class PermissibleEnumArgument extends StringEnumArgument
         "recruit" => Roles::RECRUIT,
         "ally" => Relations::ALLY,
         "truced" => Relations::TRUCE,
-        "neutral" => Relations::NONE,
-        "enemy" => Relations::ENEMY
+        "neutral" => Relations::NONE
+        //"enemy" => Relations::ENEMY
     ];
 
     public function parse(string $argument, CommandSender $sender): string
