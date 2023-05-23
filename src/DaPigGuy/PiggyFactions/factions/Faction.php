@@ -352,10 +352,10 @@ class Faction
         return ($this->relations[$faction->getId()] ?? Relations::NONE) === Relations::TRUCE;
     }
 
-    public function isEnemy(Faction $faction): bool
+    /**public function isEnemy(Faction $faction): bool
     {
         return ($this->relations[$faction->getId()] ?? Relations::NONE) === Relations::ENEMY;
-    }
+    }*/
 
     public function getBanned(): array
     {
