@@ -120,9 +120,9 @@ class LanguageManager
             $relation = "ally";
         } else if ($playerFaction?->isTruced($faction)) {
             $relation = "truce";
-        } elseif ($playerFaction?->isEnemy($faction)) {
+        } /**elseif ($playerFaction?->isEnemy($faction)) {
             $relation = "enemy";
-        }
+        }*/
         return $this->translateColorTags($this->plugin->getConfig()->getNested("symbols.colors.relations." . $relation, ""));
     }
 
