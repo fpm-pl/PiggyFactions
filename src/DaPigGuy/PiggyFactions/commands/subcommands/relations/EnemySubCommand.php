@@ -1,5 +1,5 @@
 <?php
-
+/**
 declare(strict_types=1);
 
 namespace DaPigGuy\PiggyFactions\commands\subcommands\relations;
@@ -41,4 +41,4 @@ class EnemySubCommand extends FactionSubCommand
     {
         $this->registerArgument(0, new TextArgument("faction"));
     }
-}
+}*/
