@@ -66,9 +66,9 @@ permissions:
   piggyfactions.command.faction.disband:
     default: true
     description: Allow usage of /f disband
-  piggyfactions.command.faction.enemy:
-    default: true
-    description: Allow usage of /f enemy
+  #piggyfactions.command.faction.enemy:
+    #default: true
+    #description: Allow usage of /f enemy
   piggyfactions.command.faction.flag:
     default: true
     description: Allow usage of /f flag
