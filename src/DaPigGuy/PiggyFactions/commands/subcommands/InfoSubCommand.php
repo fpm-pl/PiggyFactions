@@ -22,7 +22,7 @@ class InfoSubCommand extends FactionSubCommand
         if (isset($args["faction"])) {
             $targetFaction = $this->plugin->getFactionsManager()->getFactionByName($args["faction"]);
             if ($targetFaction === null) {
-                $this->plugin->getLanguageManager()->sendMessage($sender, "commands.invalid-faction", ["{FACTION}" => $args["faction"]]);
+                $this->plugin->getLanguageManager()->sendMessage($sender, "commands.not-in-faction", ["{FACTION}" => $args["faction"]]);
                 return;
             }
         }
