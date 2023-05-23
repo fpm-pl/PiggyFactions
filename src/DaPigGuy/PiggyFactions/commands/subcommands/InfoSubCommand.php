@@ -14,6 +14,7 @@ use pocketmine\player\Player;
 
 class InfoSubCommand extends FactionSubCommand
 {
+    protected bool $inFac = true;
     protected bool $requiresPlayer = false;
 
     public function onBasicRun(CommandSender $sender, array $args): void
@@ -22,10 +23,20 @@ class InfoSubCommand extends FactionSubCommand
         if (isset($args["faction"])) {
             $targetFaction = $this->plugin->getFactionsManager()->getFactionByName($args["faction"]);
             if ($targetFaction === null) {
-                $this->plugin->getLanguageManager()->sendMessage($sender, "commands.not-in-faction", ["{FACTION}" => $args["faction"]]);
+                $this->plugin->getLanguageManager()->sendMessage($sender, "commands.invalid-faction", ["{FACTION}" => $args["faction"]]);
                 return;
             }
         }
+        //add no fac message
+        $member = $sender instanceof Player ? $this->plugin->getPlayerManager()->getPlayer($sender) : null;
+        $isFac = $member?->getFaction();
+        if ($this->inFac) {
+            if ($isFac === null) {
+                $member->sendMessage("commands.not-in-faction");
+                return;
+            }
+        }
+        
         if ($faction === null) {
             $this->sendUsage();
             return;
