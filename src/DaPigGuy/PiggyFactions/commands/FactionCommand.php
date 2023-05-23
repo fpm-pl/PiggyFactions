@@ -41,7 +41,7 @@ use DaPigGuy\PiggyFactions\commands\subcommands\money\MoneySubCommand;
 use DaPigGuy\PiggyFactions\commands\subcommands\money\WithdrawSubCommand;
 use DaPigGuy\PiggyFactions\commands\subcommands\PlayerSubCommand;
 use DaPigGuy\PiggyFactions\commands\subcommands\relations\AllySubCommand;
-use DaPigGuy\PiggyFactions\commands\subcommands\relations\EnemySubCommand;
+//use DaPigGuy\PiggyFactions\commands\subcommands\relations\EnemySubCommand;
 use DaPigGuy\PiggyFactions\commands\subcommands\relations\NeutralSubCommand;
 use DaPigGuy\PiggyFactions\commands\subcommands\relations\TruceSubCommand;
 use DaPigGuy\PiggyFactions\commands\subcommands\relations\UnallySubCommand;
