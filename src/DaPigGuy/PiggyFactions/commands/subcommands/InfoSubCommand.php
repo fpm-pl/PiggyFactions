@@ -30,11 +30,15 @@ class InfoSubCommand extends FactionSubCommand
         //add no fac message
         $member = $sender instanceof Player ? $this->plugin->getPlayerManager()->getPlayer($sender) : null;
         $isFac = $member?->getFaction();
-        if ($this->inFac) {
-            if ($isFac === null) {
-                $member->sendMessage("commands.not-in-faction");
-                return;
+        if ($sender instanceof Player) {
+            if ($this->inFac) {
+                if ($isFac === null) {
+                    $member->sendMessage("commands.not-in-faction");
+                    return;
+                }
             }
+        }else{
+            $sender->sendMessage("Use this in-game please!");
         }
         
         if ($faction === null) {
