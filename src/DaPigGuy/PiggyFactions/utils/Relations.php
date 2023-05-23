@@ -6,7 +6,7 @@ namespace DaPigGuy\PiggyFactions\utils;
 
 class Relations
 {
-    const ENEMY = "enemy";
+    //const ENEMY = "enemy";
     const NONE = "none";
     const TRUCE = "truce";
     const ALLY = "ally";
@@ -14,7 +14,7 @@ class Relations
     const ALL = [
         Relations::ALLY,
         Relations::TRUCE,
-        Relations::NONE,
-        Relations::ENEMY
+        Relations::NONE
+        //Relations::ENEMY
     ];
 }
