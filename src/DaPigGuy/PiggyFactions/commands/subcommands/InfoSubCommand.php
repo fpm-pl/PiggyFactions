@@ -20,8 +20,8 @@ class InfoSubCommand extends FactionSubCommand
     {
         $faction = $sender instanceof Player ? $this->plugin->getPlayerManager()->getPlayerFaction($sender->getUniqueId()) : null;
         if (isset($args["faction"])) {
-            $faction = $this->plugin->getFactionsManager()->getFactionByName($args["faction"]);
-            if ($faction === null) {
+            $targetFaction = $this->plugin->getFactionsManager()->getFactionByName($args["faction"]);
+            if ($targetFaction === null) {
                 $this->plugin->getLanguageManager()->sendMessage($sender, "commands.invalid-faction", ["{FACTION}" => $args["faction"]]);
                 return;
             }
