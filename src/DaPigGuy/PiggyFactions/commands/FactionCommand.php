@@ -101,7 +101,7 @@ class FactionCommand extends BaseCommand
             new DemoteSubCommand($this->plugin, "demote", "Demote a faction member"),
             new DescriptionSubCommand($this->plugin, "description", "Set faction description", ["desc"]),
             new DisbandSubCommand($this->plugin, "disband", "Disband your faction"),
-            new EnemySubCommand($this->plugin, "enemy", "Mark faction as an enemy"),
+            //new EnemySubCommand($this->plugin, "enemy", "Mark faction as an enemy"),
             new FlagSubCommand($this->plugin, "flag", "Manage faction flags"),
             new FlySubCommand($this->plugin, "fly", "Fly within faction territories"),
             new HelpSubCommand($this->plugin, $this, "help", "Display command information"),
